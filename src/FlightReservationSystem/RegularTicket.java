@@ -1,10 +1,13 @@
 package FlightReservationSystem;
 
 public class RegularTicket {
-    public String specialServices;
+        private String specialServices;
 
+        public void setSpecialServices(String specialServices) {
+            this.specialServices = specialServices;
+        }
         public String getSpecialServices() {
-                        return specialServices;
+            return this.specialServices;
         }
         public void updateSpecialServices(String specialServices) {
             this.specialServices=specialServices;

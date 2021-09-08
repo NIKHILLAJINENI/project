@@ -1,10 +1,28 @@
 package FlightReservationSystem;
 
 public class Flight {
-    public String flightNumber;
-    public String airLine;
-    public int capacity;
+    private String flightNumber;
+    private String airLine;
+    private int capacity;
     private int bookedSeats;
+    public String getFlightNumber() {
+        return flightNumber;
+    }
+    public void setFlightNumber(String flightNumber) {
+        this.flightNumber = flightNumber;
+    }
+    public String getAirLine() {
+        return airLine;
+    }
+    public void setAirLine(String airLine) {
+        this.airLine = airLine;
+    }
+    public int getCapacity() {
+        return capacity;
+    }
+    public void setCapacity(int capacity) {
+        this.capacity = capacity;
+    }
     public String getFlightDetails() {
         if(getBookedSeats()>=capacity) {
             return null;
@@ -20,6 +38,7 @@ public class Flight {
             System.out.println("Seats are full");
             return false;}
         else {
+            System.out.println("Seats are booked");
             return true;}
     }
     public void incrementBookingCounter() {
@@ -28,7 +47,6 @@ public class Flight {
         }
     }
     public int getBookedSeats() {
-
         return bookedSeats;
     }
     public void setBookedSeats(int bookedSeats) {
