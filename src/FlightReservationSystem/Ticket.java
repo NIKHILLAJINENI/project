@@ -1,6 +1,6 @@
 package FlightReservationSystem;
 
-public class Ticket {
+public abstract class Ticket {
     private String pnr;
     private String from;
     private String to;
@@ -14,6 +14,19 @@ public class Ticket {
 
     public Ticket(Flight flight) {
         this.flight = flight;
+    }
+    public Ticket(String pnr, String from, String to, Flight flight, String departureDateTime, String arrivalDateTime,
+                  Passenger passenger, String seatno, float price, boolean cancelled) {
+        this.pnr = pnr;
+        this.from = from;
+        this.to = to;
+        this.flight = flight;
+        this.departureDateTime = departureDateTime;
+        this.arrivalDateTime = arrivalDateTime;
+        this.passenger = passenger;
+        this.seatno = seatno;
+        this.price = price;
+        this.cancelled = cancelled;
     }
     public String getPnr() {
         return pnr;
@@ -80,6 +93,11 @@ public class Ticket {
     }
 
     public String checkStatus() {
+        if(cancelled= true) {
+            System.out.println("Ticket Cancelled");
+        }
+        else {
+            System.out.println("Ticket Booked");}
         return null;
     }
     public int getFlightDuration() {

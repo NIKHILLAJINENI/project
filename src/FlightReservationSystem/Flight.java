@@ -36,9 +36,9 @@ public class Flight {
     public boolean checkAvailability() {
         if(getBookedSeats()>=capacity) {
             System.out.println("Seats are full");
+            System.exit(capacity);
             return false;}
         else {
-            System.out.println("Seats are booked");
             return true;}
     }
     public void incrementBookingCounter() {
